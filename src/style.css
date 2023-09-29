@@ -1,0 +1,88 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+.search-form {
+    width: 100vw;
+    background-color: #865fa0;
+    justify-content: center;
+    margin-top: 0;
+    padding: 10px;
+    display: inline-flex;
+    box-shadow: 0 2px 6px #000c;
+}
+.search-form input {
+    border-style: none;
+    align-content: center;
+    padding: 15px 100px 16px 3px;
+}
+
+.search-form button {
+    width: 42px;
+    height: 56px;
+    cursor: pointer;
+    background-color: #5f65a045;
+    border-style: none;
+    justify-content: center;
+    align-items: center;
+    margin-left: -40px;
+}
+
+
+.icon-search {
+    width: 20px;
+    height: 20px;
+    fill: #000000;
+}
+
+.gallery {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 60px;
+    padding: 10px;
+    display: flex;
+}
+
+.load-more {
+    color: #452d27;
+    background-color: #5f66a0;
+    border-color: #5f66a0;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition-duration: .5s;
+
+}
+.is-hidden {
+    display: none;
+}
+
+
+
+.photo-card{
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+
+@media screen  and  (min-width: 1300px) {
+    .image-photo{
+        height:200px;
+            width: 350px;
+        }
+
+}
+
+@media screen  and  (min-width: 960px) {
+    .image-photo{
+        height:200px;
+            width: 300px;
+        }
+        
+}
+@media screen  and  (min-width: 480px) {
+    .image-photo{
+        height:250px;
+            width: 350px;
+        }
+        
+}
