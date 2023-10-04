@@ -19,8 +19,17 @@ loadMoreBtn.addEventListener('click', onLoadMore);
 async function onSearch(e) {
   e.preventDefault();
 
+  // Отримуємо значення з інпуту та видаляємо пробіли з початку та кінця рядка
+  searchQuery = e.currentTarget.searchQuery.value.trim();
+
+  // Перевіряємо, чи пошуковий запит не порожній
+  if (searchQuery === "") {
+    // Якщо інпут порожній, не відправляємо запит на сервер та виводимо повідомлення про помилку
+    Notify.failure('Please enter a valid search query.');
+    return;
+  }
+
   gallery.innerHTML = '';
-  searchQuery = e.currentTarget.searchQuery.value;
   console.log(searchQuery);
   page = 1;
   const response = await fetchImages(searchQuery, page, per_page);
